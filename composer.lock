@@ -1,0 +1,1750 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7eb127dae311c00761b4ace804b0ff79",
+    "packages": [
+        {
+            "name": "container-interop/container-interop",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/container-interop/container-interop.git",
+                "reference": "fc08354828f8fd3245f77a66b9e23a6bca48297e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/container-interop/container-interop/zipball/fc08354828f8fd3245f77a66b9e23a6bca48297e",
+                "reference": "fc08354828f8fd3245f77a66b9e23a6bca48297e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Interop\\Container\\": "src/Interop/Container/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
+            "time": "2014-12-30T15:22:37+00:00"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "bd4461328621bde0ae6b1b2675fbc6aca4ceb558"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/bd4461328621bde0ae6b1b2675fbc6aca4ceb558",
+                "reference": "bd4461328621bde0ae6b1b2675fbc6aca4ceb558",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*",
+                "phpunit/phpunit": "^5.6.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2016-12-30T15:59:45+00:00"
+        },
+        {
+            "name": "doctrine/collections",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/collections.git",
+                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Collections\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Collections Abstraction library",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "array",
+                "collections",
+                "iterator"
+            ],
+            "time": "2015-04-14T22:21:58+00:00"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Lexer\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2014-09-09T13:34:57+00:00"
+        },
+        {
+            "name": "egulias/email-validator",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egulias/EmailValidator.git",
+                "reference": "30562b69fc6c8e9740645877a98063b3842204b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/30562b69fc6c8e9740645877a98063b3842204b2",
+                "reference": "30562b69fc6c8e9740645877a98063b3842204b2",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "^1.0.1",
+                "php": ">= 5.5"
+            },
+            "require-dev": {
+                "dominicsayers/isemail": "dev-master",
+                "phpunit/phpunit": "^4.8.0",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "suggest": {
+                "ext/php-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Egulias\\EmailValidator\\": "EmailValidator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eduardo Gulias Davis"
+                }
+            ],
+            "description": "A library for validating emails against several RFCs",
+            "homepage": "https://github.com/egulias/EmailValidator",
+            "keywords": [
+                "email",
+                "emailvalidation",
+                "emailvalidator",
+                "validation",
+                "validator"
+            ],
+            "time": "2016-08-07T21:18:59+00:00"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "20ff8bbb57205368b4b42d094642a3e52dac85fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/20ff8bbb57205368b4b42d094642a3e52dac85fb",
+                "reference": "20ff8bbb57205368b4b42d094642a3e52dac85fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2016-11-02T15:56:58+00:00"
+        },
+        {
+            "name": "erusev/parsedown-extra",
+            "version": "0.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown-extra.git",
+                "reference": "0db5cce7354e4b76f155d092ab5eb3981c21258c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown-extra/zipball/0db5cce7354e4b76f155d092ab5eb3981c21258c",
+                "reference": "0db5cce7354e4b76f155d092ab5eb3981c21258c",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "~1.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ParsedownExtra": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "An extension of Parsedown that adds support for Markdown Extra.",
+            "homepage": "https://github.com/erusev/parsedown-extra",
+            "keywords": [
+                "markdown",
+                "markdown extra",
+                "parsedown",
+                "parser"
+            ],
+            "time": "2015-11-01T10:19:22+00:00"
+        },
+        {
+            "name": "fei/connect-client",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:flash-global/connect-client.git",
+                "reference": "4e2f63a34a2d6fae40d81228347940ab5888e102"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.flash-global.net/dist/fei-connect-client-4e2f63a34a2d6fae40d81228347940ab5888e102-zip-6ec1e3.zip",
+                "reference": "4e2f63a34a2d6fae40d81228347940ab5888e102",
+                "shasum": "b468930a19034e3ee591eb634311179dfec5696f"
+            },
+            "require": {
+                "fei/connect-common": "^1.0",
+                "lightsaml/lightsaml": "^1.2",
+                "nikic/fast-route": "^1.0",
+                "zendframework/zend-diactoros": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Fei\\Service\\Connect\\Client\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Simonin",
+                    "email": "vsi@opcoding.eu"
+                }
+            ],
+            "description": "Flash Connect Client - Service Provider",
+            "support": {
+                "source": "https://github.com/flash-global/connect-client/tree/v1.0.3",
+                "issues": "https://github.com/flash-global/connect-client/issues"
+            },
+            "time": "2017-01-11T15:29:46+00:00"
+        },
+        {
+            "name": "fei/connect-common",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:flash-global/connect-common.git",
+                "reference": "764d80f444420a0cca54d5cceb5509e43ac301bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.flash-global.net/dist/fei-connect-common-764d80f444420a0cca54d5cceb5509e43ac301bc-zip-b29b76.zip",
+                "reference": "764d80f444420a0cca54d5cceb5509e43ac301bc",
+                "shasum": "7a02918cf0531bd0f0bbdc1304e49be9bc3387a4"
+            },
+            "require": {
+                "doctrine/annotations": "^1.3",
+                "doctrine/collections": "^1.3",
+                "egulias/email-validator": "~2.1",
+                "fei/entities": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fei\\Service\\Connect\\Common\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Simonin",
+                    "email": "vsi@opcoding.eu"
+                }
+            ],
+            "description": "Flash Connect common components",
+            "support": {
+                "source": "https://github.com/flash-global/connect-common/tree/v1.0.2",
+                "issues": "https://github.com/flash-global/connect-common/issues"
+            },
+            "time": "2016-12-16T08:59:18+00:00"
+        },
+        {
+            "name": "fei/entities",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:flash-global/entities.git",
+                "reference": "fab6a97698dcc5e5bf2f6ab64979b0a880f88978"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.flash-global.net/dist/fei-entities-fab6a97698dcc5e5bf2f6ab64979b0a880f88978-zip-683dd0.zip",
+                "reference": "fab6a97698dcc5e5bf2f6ab64979b0a880f88978",
+                "shasum": "da826f00087411fb9ef5948c91eb0ebda2849fe4"
+            },
+            "require-dev": {
+                "codeception/codeception": "^2.2",
+                "league/fractal": "^0.13.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fei\\Entity\\": "src/"
+                }
+            },
+            "license": [
+                "Proprietary"
+            ],
+            "description": "Entities descriptors and helpers",
+            "time": "2016-07-18T12:12:09+00:00"
+        },
+        {
+            "name": "lightsaml/lightsaml",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lightSAML/lightSAML.git",
+                "reference": "3f3b93325e1bffc15021c1250b43f2053c42b0d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lightSAML/lightSAML/zipball/3f3b93325e1bffc15021c1250b43f2053c42b0d2",
+                "reference": "3f3b93325e1bffc15021c1250b43f2053c42b0d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.1",
+                "robrichards/xmlseclibs": "~2.0",
+                "symfony/event-dispatcher": "~2.3|~3.0",
+                "symfony/http-foundation": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "monolog/monolog": "~1.3",
+                "phpunit/phpunit": "~4.5",
+                "pimple/pimple": "~3.0",
+                "satooshi/php-coveralls": "~0.6",
+                "symfony/css-selector": "~2.3",
+                "symfony/dom-crawler": "~2.3"
+            },
+            "suggest": {
+                "lightsaml/sp-bundle": "Symfony 2 SP security bundle",
+                "lightsaml/symfony-bridge": "Symfony 2 build container bridge"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LightSaml\\Tests\\": "tests/",
+                    "LightSaml\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Milos Tomic",
+                    "email": "tmilos@gmail.com",
+                    "homepage": "https://github.com/tmilos/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Light SAML 2.0 PHP library",
+            "homepage": "https://www.lightsaml.com/",
+            "keywords": [
+                "SAML 2.0",
+                "Single Logout",
+                "Single SignOn",
+                "library",
+                "lightSAML",
+                "php"
+            ],
+            "time": "2016-11-18T08:30:01+00:00"
+        },
+        {
+            "name": "nikic/fast-route",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "f3dcf5130e634b6123d40727d612ec6aa4f61fb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/f3dcf5130e634b6123d40727d612ec6aa4f61fb3",
+                "reference": "f3dcf5130e634b6123d40727d612ec6aa4f61fb3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2016-10-20T17:36:47+00:00"
+        },
+        {
+            "name": "objective-php/application",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/application.git",
+                "reference": "00d44119f2f703f992e20fab4842cf3b746a7bbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/application/zipball/00d44119f2f703f992e20fab4842cf3b746a7bbd",
+                "reference": "00d44119f2f703f992e20fab4842cf3b746a7bbd",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/components": "1.*",
+                "objective-php/data-processor": "1.0.*",
+                "objective-php/events-handler": "1.0.*",
+                "objective-php/html": "1.*",
+                "objective-php/message": "0.9.*",
+                "objective-php/services-factory": "1.0.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "framework",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Application\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Objective PHP applicative framework",
+            "homepage": "https://github.com/objective-php/application",
+            "keywords": [
+                "framework",
+                "objective php"
+            ],
+            "time": "2016-09-16T13:59:25+00:00"
+        },
+        {
+            "name": "objective-php/components",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/components.git",
+                "reference": "a4d3b3ab44a12c3158d55ba4cc972121c8bb70b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/components/zipball/a4d3b3ab44a12c3158d55ba4cc972121c8bb70b9",
+                "reference": "a4d3b3ab44a12c3158d55ba4cc972121c8bb70b9",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/config": "1.*",
+                "objective-php/data-processor": "1.*",
+                "objective-php/invokable": "1.*",
+                "objective-php/matcher": "1.*",
+                "objective-php/notification": "1.*",
+                "objective-php/phpunit-extension": "1.*",
+                "objective-php/primitives": "1.*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                },
+                {
+                    "name": "Jérôme 'Neofox' Schaeffer",
+                    "email": "jerome@objective-php.org",
+                    "role": "dev"
+                }
+            ],
+            "description": "Objective PHP Components",
+            "homepage": "https://github.com/objective-php/components",
+            "keywords": [
+                "objective php",
+                "primitives"
+            ],
+            "time": "2016-05-05T15:59:19+00:00"
+        },
+        {
+            "name": "objective-php/config",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/config.git",
+                "reference": "e0349a9885c542e86ad923bfe53dfe625c642905"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/config/zipball/e0349a9885c542e86ad923bfe53dfe625c642905",
+                "reference": "e0349a9885c542e86ad923bfe53dfe625c642905",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/matcher": "1.*",
+                "objective-php/primitives": "1.*",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "objective-php/phpunit-extension": "1.0",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Config\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Config component for ObjectivePHP",
+            "homepage": "https://github.com/objective-php/config",
+            "keywords": [
+                "config",
+                "objective-php"
+            ],
+            "time": "2016-07-05T12:38:51+00:00"
+        },
+        {
+            "name": "objective-php/data-processor",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/data-processor.git",
+                "reference": "0c69a7e4443d26e94944b818701cf991994b38a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/data-processor/zipball/0c69a7e4443d26e94944b818701cf991994b38a7",
+                "reference": "0c69a7e4443d26e94944b818701cf991994b38a7",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/matcher": "1.*",
+                "objective-php/primitives": "1.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "objective-php/application": "dev-master",
+                "objective-php/events-handler": "1.0.*",
+                "objective-php/message": "0.9.*",
+                "objective-php/phpunit-extension": "*",
+                "objective-php/services-factory": "1.0.*",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\DataProcessor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Objective PHP Data Processor component",
+            "homepage": "https://github.com/objective-php/data-processor",
+            "keywords": [
+                "data procesosr",
+                "objective php"
+            ],
+            "time": "2016-05-05T15:32:33+00:00"
+        },
+        {
+            "name": "objective-php/events-handler",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/events-handler.git",
+                "reference": "b91fa4aa5c53bfddf7ec9b36a13819f9014bd7b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/events-handler/zipball/b91fa4aa5c53bfddf7ec9b36a13819f9014bd7b5",
+                "reference": "b91fa4aa5c53bfddf7ec9b36a13819f9014bd7b5",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/matcher": "1.*",
+                "objective-php/primitives": "1.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "objective-php/services-factory": "1.0.*",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Events\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Events Handler for ObjectivePHP",
+            "homepage": "https://github.com/objective-php/events-handler",
+            "keywords": [
+                "events",
+                "events handler",
+                "objective php"
+            ],
+            "time": "2016-05-06T15:58:36+00:00"
+        },
+        {
+            "name": "objective-php/html",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/html.git",
+                "reference": "ce2f270a03e7550e2e813a34ab7f7491a7dd5d69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/html/zipball/ce2f270a03e7550e2e813a34ab7f7491a7dd5d69",
+                "reference": "ce2f270a03e7550e2e813a34ab7f7491a7dd5d69",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "~1.5",
+                "erusev/parsedown-extra": "~0.7",
+                "objective-php/primitives": "1.3.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "HTML helper classes for Objective PHP",
+            "homepage": "https://github.com/objective-php/html",
+            "keywords": [
+                "html",
+                "objective php"
+            ],
+            "time": "2016-05-06T22:22:14+00:00"
+        },
+        {
+            "name": "objective-php/invokable",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/invokable.git",
+                "reference": "1e2ee94443488e68e429ba89bd0f567a2ffb5b7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/invokable/zipball/1e2ee94443488e68e429ba89bd0f567a2ffb5b7a",
+                "reference": "1e2ee94443488e68e429ba89bd0f567a2ffb5b7a",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/primitives": "1.3.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "objective-php/application": "dev-master",
+                "objective-php/components": "1.0.*",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Invokable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Objective PHP Invokable component",
+            "homepage": "https://github.com/objective-php/invokable",
+            "keywords": [
+                "invokable",
+                "objective php"
+            ],
+            "time": "2016-06-02T17:33:19+00:00"
+        },
+        {
+            "name": "objective-php/matcher",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/matcher.git",
+                "reference": "1418bfb33ca2b1ad680951c8bc0dc99af2aef81e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/matcher/zipball/1418bfb33ca2b1ad680951c8bc0dc99af2aef81e",
+                "reference": "1418bfb33ca2b1ad680951c8bc0dc99af2aef81e",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/phpunit-extension": "~1.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Matcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Generic engine to match identifiers against simple yet powerful patterns",
+            "homepage": "https://github.com/objective-php/matcher",
+            "keywords": [
+                "matcher",
+                "objective php"
+            ],
+            "time": "2016-05-05T13:13:34+00:00"
+        },
+        {
+            "name": "objective-php/message",
+            "version": "v0.9.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/message.git",
+                "reference": "cbc133aded78423d1a08c8eb6efbc5a3790e3b3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/message/zipball/cbc133aded78423d1a08c8eb6efbc5a3790e3b3c",
+                "reference": "cbc133aded78423d1a08c8eb6efbc5a3790e3b3c",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/primitives": "1.*",
+                "zendframework/zend-diactoros": "~1.0"
+            },
+            "require-dev": {
+                "objective-php/phpunit-extension": "1.*",
+                "objective-php/router": "dev-master as 1.0",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL3-v3"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org"
+                }
+            ],
+            "description": "ObjectivePHP implementation for PSR-7",
+            "time": "2016-06-26T15:39:48+00:00"
+        },
+        {
+            "name": "objective-php/notification",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/notification.git",
+                "reference": "e24689fa1c1644bf9ca513805137fb5e68bc6177"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/notification/zipball/e24689fa1c1644bf9ca513805137fb5e68bc6177",
+                "reference": "e24689fa1c1644bf9ca513805137fb5e68bc6177",
+                "shasum": ""
+            },
+            "require": {
+                "objective-php/matcher": "1.*",
+                "objective-php/primitives": "1.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "objective-php/phpunit-extension": "1.*",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Notification\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                },
+                {
+                    "name": "Jérôme 'Neofox' Schaeffer",
+                    "email": "jerome@objective-php.org",
+                    "role": "dev"
+                }
+            ],
+            "description": "Objective PHP Notification component",
+            "homepage": "https://github.com/objective-php/notification",
+            "keywords": [
+                "components",
+                "objective php"
+            ],
+            "time": "2016-05-05T14:02:15+00:00"
+        },
+        {
+            "name": "objective-php/phpunit-extension",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/phpunit-extension.git",
+                "reference": "1b3e2b516585e828a947248d571b3f966b768e0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/phpunit-extension/zipball/1b3e2b516585e828a947248d571b3f966b768e0f",
+                "reference": "1b3e2b516585e828a947248d571b3f966b768e0f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\PHPUnit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Some add-ons for PHPUnit Unit Test Framework",
+            "homepage": "https://github.com/objective-php/phpunit-extension",
+            "keywords": [
+                "objective php",
+                "phpunit"
+            ],
+            "time": "2016-05-05T12:55:53+00:00"
+        },
+        {
+            "name": "objective-php/primitives",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/primitives.git",
+                "reference": "9cff1d96a9c909d8fca2e9eb6faad2b145c57b19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/primitives/zipball/9cff1d96a9c909d8fca2e9eb6faad2b145c57b19",
+                "reference": "9cff1d96a9c909d8fca2e9eb6faad2b145c57b19",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "objective-php/phpunit-extension": "1.*",
+                "phpunit/phpunit": "5.*"
+            },
+            "suggest": {
+                "objective-php/matcher": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Primitives\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                },
+                {
+                    "name": "Ronan 'Gloo' Teissier",
+                    "email": "ronan@objective-php.org",
+                    "role": "dev"
+                }
+            ],
+            "description": "Primitives classes for ObjectivePHP",
+            "homepage": "https://github.com/objective-php/primitives",
+            "keywords": [
+                "objective php",
+                "primitives"
+            ],
+            "time": "2016-09-10T09:16:53+00:00"
+        },
+        {
+            "name": "objective-php/services-factory",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/services-factory.git",
+                "reference": "6d7472fd6d9e19805d55ce1c31d7406e57987424"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/services-factory/zipball/6d7472fd6d9e19805d55ce1c31d7406e57987424",
+                "reference": "6d7472fd6d9e19805d55ce1c31d7406e57987424",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.1",
+                "doctrine/annotations": "*",
+                "objective-php/config": "1.0.*",
+                "objective-php/matcher": "1.0.*",
+                "objective-php/primitives": "1.3.*",
+                "php": ">=7.0",
+                "phpdocumentor/reflection-docblock": "*"
+            },
+            "require-dev": {
+                "objective-php/events-handler": "1.0.*",
+                "objective-php/invokable": "1.0.*",
+                "objective-php/phpunit-extension": "1.0.*",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\ServicesFactory\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                }
+            ],
+            "description": "Services container for Objective PHP",
+            "homepage": "https://github.com/objective-php/services-factory",
+            "keywords": [
+                "dependency injection",
+                "objective php",
+                "services"
+            ],
+            "time": "2016-05-08T13:28:26+00:00"
+        },
+        {
+            "name": "phpdocumentor/reflection-common",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
+                "reference": "144c307535e82c8fdcaacbcfc1d6d8eeb896687c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/144c307535e82c8fdcaacbcfc1d6d8eeb896687c",
+                "reference": "144c307535e82c8fdcaacbcfc1d6d8eeb896687c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaap van Otterdijk",
+                    "email": "opensource@ijaap.nl"
+                }
+            ],
+            "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
+            "homepage": "http://www.phpdoc.org",
+            "keywords": [
+                "FQSEN",
+                "phpDocumentor",
+                "phpdoc",
+                "reflection",
+                "static analysis"
+            ],
+            "time": "2015-12-27T11:43:31+00:00"
+        },
+        {
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8331b5efe816ae05461b7ca1e721c01b46bafb3e",
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "phpdocumentor/reflection-common": "^1.0@dev",
+                "phpdocumentor/type-resolver": "^0.2.0",
+                "webmozart/assert": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "me@mikevanriel.com"
+                }
+            ],
+            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
+            "time": "2016-09-30T07:12:33+00:00"
+        },
+        {
+            "name": "phpdocumentor/type-resolver",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/TypeResolver.git",
+                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
+                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "phpdocumentor/reflection-common": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.2||^4.8.24"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "me@mikevanriel.com"
+                }
+            ],
+            "time": "2016-11-25T06:54:22+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "robrichards/xmlseclibs",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/xmlseclibs.git",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3"
+            },
+            "suggest": {
+                "ext/mcrypt": "MCrypt extension",
+                "ext/openssl": "OpenSSL extension"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\XMLSecLibs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "https://github.com/robrichards/xmlseclibs",
+            "keywords": [
+                "security",
+                "signature",
+                "xml",
+                "xmldsig"
+            ],
+            "time": "2016-09-08T13:15:00+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "e8f47a327c2f0fd5aa04fa60af2b693006ed7283"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/e8f47a327c2f0fd5aa04fa60af2b693006ed7283",
+                "reference": "e8f47a327c2f0fd5aa04fa60af2b693006ed7283",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.8|~3.0",
+                "symfony/dependency-injection": "~2.8|~3.0",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/stopwatch": "~2.8|~3.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-10-13T06:29:04+00:00"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-foundation.git",
+                "reference": "9963bc29d7f4398b137dd8efc480efe54fdbe5f1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/9963bc29d7f4398b137dd8efc480efe54fdbe5f1",
+                "reference": "9963bc29d7f4398b137dd8efc480efe54fdbe5f1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/polyfill-mbstring": "~1.1"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.8|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-11-27T04:21:38+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2016-11-14T01:06:16+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Assert\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "time": "2016-11-23T20:04:58+00:00"
+        },
+        {
+            "name": "zendframework/zend-diactoros",
+            "version": "1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-diactoros.git",
+                "reference": "d9c1fd7c4b024179d49faf367da544b4eef7cfe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/d9c1fd7c4b024179d49faf367da544b4eef7cfe8",
+                "reference": "d9c1fd7c4b024179d49faf367da544b4eef7cfe8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "~1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6 || ^5.5",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev",
+                    "dev-develop": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Diactoros\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "PSR HTTP Message implementations",
+            "homepage": "https://github.com/zendframework/zend-diactoros",
+            "keywords": [
+                "http",
+                "psr",
+                "psr-7"
+            ],
+            "time": "2017-01-05T21:44:28+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
