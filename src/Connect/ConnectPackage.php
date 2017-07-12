@@ -7,6 +7,7 @@ use Fei\Service\Connect\Client\Connect;
 use Fei\Service\Connect\Client\Metadata;
 use Fei\Service\Connect\Client\Saml;
 use ObjectivePHP\Application\ApplicationInterface;
+use ObjectivePHP\Package\Connect\Config\ConnectConfig;
 use ObjectivePHP\Package\Connect\Config\IdentityProviderParam;
 use ObjectivePHP\Package\Connect\Config\PrivateKey;
 use ObjectivePHP\Package\Connect\Config\ServiceProvider;
@@ -26,6 +27,38 @@ class ConnectPackage
      */
     public function __invoke(ApplicationInterface $app)
     {
+        if ($app->getConfig()->get(ConnectConfig::class)) {
+            $directive = $app->getConfig()->get(ConnectConfig::class);
+
+            $callback = $directive['profileAssociationCallback'];
+
+            $app->getServicesFactory()->registerService([
+                'id' => 'connect.config',
+                'class' => Config::class,
+                'setters' => [
+                    'setDefaultTargetPath' => [$directive['defaultTargetPath']],
+                    'setLogoutTargetPath' => [$directive['logoutTargetPath']],
+                ]
+            ]);
+
+            if ($callback) {
+                $app->getServicesFactory()->registerService([
+                    'id' => 'connect.config',
+                    'class' => Config::class,
+                    'setters' => [
+                        'setDefaultTargetPath' => [$directive['defaultTargetPath']],
+                        'setLogoutTargetPath' => [$directive['logoutTargetPath']],
+                        'registerProfileAssociation' => [$callback, $directive['profileAssociationPath']]
+                    ]
+                ]);
+            }
+        } else {
+            $app->getServicesFactory()->registerService([
+                'id' =>'connect.config',
+                'class' => Config::class
+            ]);
+        }
+
         $app->getServicesFactory()->registerService(
             [
                 'id' =>'connect.client',
@@ -36,10 +69,6 @@ class ConnectPackage
                 'id' =>'connect.saml',
                 'class' => Saml::class,
                 'params' => [new ServiceReference('connect.metadata')]
-            ],
-            [
-                'id' =>'connect.config',
-                'class' => Config::class
             ],
             [
                 'id' =>'connect.metadata',
