@@ -408,17 +408,17 @@
         },
         {
             "name": "fei/connect-client",
-            "version": "v1.2.5",
+            "version": "v1.2.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:flash-global/connect-client.git",
-                "reference": "b411475d11661d99fedb3f397df6730ffbdeac50"
+                "reference": "b57b3e1c62016c090270e7c6106029dc0beaaacb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-connect-client-b411475d11661d99fedb3f397df6730ffbdeac50-zip-08444d.zip",
-                "reference": "b411475d11661d99fedb3f397df6730ffbdeac50",
-                "shasum": "d2636456476861e9dce1918c8a04318ef9d51eb7"
+                "url": "https://composer.flash-global.net/dist/fei-connect-client-b57b3e1c62016c090270e7c6106029dc0beaaacb-zip-80a1dd.zip",
+                "reference": "b57b3e1c62016c090270e7c6106029dc0beaaacb",
+                "shasum": "37a1bf8934762787ab00ee9ab0ad7d53baa653d1"
             },
             "require": {
                 "fei/api-client": "^1.1",
@@ -449,10 +449,10 @@
             ],
             "description": "Flash Connect Client - Service Provider",
             "support": {
-                "source": "https://github.com/flash-global/connect-client/tree/v1.2.5",
+                "source": "https://github.com/flash-global/connect-client/tree/v1.2.6",
                 "issues": "https://github.com/flash-global/connect-client/issues"
             },
-            "time": "2017-07-04T08:04:11+00:00"
+            "time": "2017-07-12T11:42:10+00:00"
         },
         {
             "name": "fei/connect-common",
@@ -507,13 +507,13 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:flash-global/entities.git",
-                "reference": "fab6a97698dcc5e5bf2f6ab64979b0a880f88978"
+                "reference": "bf2aa1ae8c0c49cb6989c58c721a45e8692a52ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-entities-fab6a97698dcc5e5bf2f6ab64979b0a880f88978-zip-683dd0.zip",
-                "reference": "fab6a97698dcc5e5bf2f6ab64979b0a880f88978",
-                "shasum": "da826f00087411fb9ef5948c91eb0ebda2849fe4"
+                "url": "https://composer.flash-global.net/dist/fei-entities-bf2aa1ae8c0c49cb6989c58c721a45e8692a52ab-zip-acd356.zip",
+                "reference": "bf2aa1ae8c0c49cb6989c58c721a45e8692a52ab",
+                "shasum": "67bf0a2ab69dfdb61a376b8ced88c87ed7f47e03"
             },
             "require-dev": {
                 "codeception/codeception": "^2.2",
@@ -529,6 +529,10 @@
                 "Proprietary"
             ],
             "description": "Entities descriptors and helpers",
+            "support": {
+                "source": "https://github.com/flash-global/entities/tree/v1.0.4",
+                "issues": "https://github.com/flash-global/entities/issues"
+            },
             "time": "2016-07-18T12:12:09+00:00"
         },
         {
