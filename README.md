@@ -42,46 +42,19 @@ class Application extends AbstractApplication
 }
 ```
 
-Finally we could plug the Connect Middleware. The purpose of the connect middleware is to handle SAML request and
-response protocol with the configured Identification Provider (IdP).
+The `ConnectPackage` will also generate a ConnectResponse so it can handle SAML request and response protocol with the configured Identification Provider (IdP).
 
-```php
+You can choose on which step you want to return this response. By default, the `ConnectPackage` will try to generate it in a Middleware in the `auth` step. You can change this step name in the constructor of the ConnectPackage like this :
+ 
+ ```php
 <?php
-
-use ObjectivePHP\Application\AbstractApplication;
 use ObjectivePHP\Package\Connect\ConnectPackage;
-use ObjectivePHP\Package\Connect\Middleware\ConnectMiddleware;
-use ObjectivePHP\Application\ApplicationInterface;
 
-class Application extends AbstractApplication
-{
-    public function init()
-    {
-        // Define some application steps
-        $this->addSteps('bootstrap', 'init', 'auth', 'route', 'rendering');
-        
-        // Initializations...
-
-        // Plugging the Connect Package in the bootstrap step
         $this->getStep('bootstrap')
-            ->plug(ConnectPackage::class);
-
-        // Another initialization...
-
-        $this->getStep('auth')
-            // Here we plug the Connect Middleware
-            ->plug(ConnectMiddleware::class)
-            ->plug(function (ApplicationInterface $app) {
-                // Check if current authenticate user has the right role
-                if ($app->getServicesFactory()->get('connect.client')->getUser()->getCurrentRole() != 'ADMIN') {
-                    throw new Exception('Unauthorized', 401);
-                }
-            });
-
-         // Another initialization...
-    }
-}
+            ->plug(new ConnectPackage('my_auth_step'));
 ```
+
+By default if you don't specify your `auth` step and you don't have this step in your application workflow, `ConnectPackage` will generate this response in the same middleware of the `ConnectPackage`.
 
 ### Application configuration
 
@@ -89,74 +62,27 @@ Create a file in your configuration directory and put your SAML Metadata configu
 
 ```php
 <?php
-
-use LightSaml\Credential\X509Certificate;
-use LightSaml\Model\Metadata\AssertionConsumerService;
-use LightSaml\Model\Metadata\IdpSsoDescriptor;
-use LightSaml\Model\Metadata\KeyDescriptor;
-use LightSaml\Model\Metadata\SingleLogoutService;
-use LightSaml\Model\Metadata\SingleSignOnService;
-use LightSaml\Model\Metadata\SpSsoDescriptor;
-use LightSaml\SamlConstants;
-use ObjectivePHP\Package\Connect\Config\IdentityProviderParam;
-use ObjectivePHP\Package\Connect\Config\PrivateKey;
-use ObjectivePHP\Package\Connect\Config\ServiceProvider;
+use ObjectivePHP\Package\Connect\Config\ConnectConfig;
 
 return [
-    // The Service Provider configuration
-    new ServiceProvider(
-        (new SpSsoDescriptor())
-            // The ID of the service provider: must be the base URL of your project
-            ->setID('http://my.sp.com')
-            // Configure the Assertion Consumer Service endpoint
-            ->addAssertionConsumerService(
-                new AssertionConsumerService(
-                    'http://my.sp.com/acs',
-                    SamlConstants::BINDING_SAML2_HTTP_POST
-                )
-            )
-            // Configure the logout endpoint
-            ->addSingleLogoutService(
-                new SingleLogoutService(
-                    'http://my.sp.com/logout',
-                    SamlConstants::BINDING_SAML2_HTTP_POST
-                )
-            )
-            // Add a certificate for signing the Service Provider message
-            ->addKeyDescriptor(new KeyDescriptor(
-                KeyDescriptor::USE_SIGNING,
-                X509Certificate::fromFile(__DIR__ . '/keys/sp.crt')
-            ))
-            // Add a certificate for encrypting the Service Provider message
-            ->addKeyDescriptor(new KeyDescriptor(
-                KeyDescriptor::USE_ENCRYPTION,
-                X509Certificate::fromFile(__DIR__ . '/keys/sp.crt')
-            ))
-    ),
-    new IdentityProviderParam(
-        'default',
-        (new IdpSsoDescriptor())
-            // The ID of your Identity Provider (IdP): must be the base URL of the IdP 
-            ->setID('http://your.idp.com')
-            // Tell if your Service Provider must provide signed AuthnRequest to the IdP 
-            ->setWantAuthnRequestsSigned(true)
-            // Configure the IdP SSO endpoint where your Service Provider must send AuthnRequest
-            ->addSingleSignOnService(
-                new SingleSignOnService('http://your.idp.com/sso', SamlConstants::BINDING_SAML2_HTTP_REDIRECT)
-            )
-            // Configure the IdP logout endpoint where your Service Provider must initiate the logout behaviour 
-            ->addSingleLogoutService(
-                new SingleLogoutService('http://your.idp.com/logout', SamlConstants::BINDING_SAML2_HTTP_POST)
-            )
-            // The IdP public certificate
-            ->addKeyDescriptor(new KeyDescriptor(
-                KeyDescriptor::USE_SIGNING,
-                X509Certificate::fromFile(__DIR__ . '/keys/idp/idp.crt')
-            ))
-    ),
-    // Configure the Service Provider private key
-    new PrivateKey(file_get_contents(__DIR__ . '/keys/sp.pem'))
+        (new ConnectConfig())
+            ->setEntityID('http://project-url')
+            // ... call your other setters
 ];
 ```
 
-Please check out `connect-client` documentation for more information about SAML Metadata configuration.
+You can configure multiple things with the `ConnectConfig` class and its setters. Here are what you can configure:
+
+| Setter                          | Description                                    	 | Default   |
+|---------------------------------|--------------------------------------------------|-----------|
+| `setDefaultTargetPath`          | Target path where the user is redirected | / |
+| `setLogoutTargetPath`           | Target path where the user is redirected after logging out |     /      |
+| `setEntityID`                   | Identifier (url) of the project that use this package| none|
+| `setName`                       |Name (label) of the application| url of the application |
+| `setIdpEntityID`                |Identifier (url) of the IDP | none |
+| `setSamlMetadataBaseDir`        |Directory where the Saml metadata are stored| app/metadata|
+| `setSpMetadataFile`             |Metadata file of the service provider| sp.xml |
+| `setIdpMetadataFile`            |Metadata file of the identity provider| idp.xml |
+| `setIdpMetadataFileTarget`      |Metadata file target of the identity provider|idp.xml|
+| `setPrivateKeyFilePath`         |Path where the private key file is stored| app/key|
+| `setAdminPathInfo`              | Endpoint where the administration of the client is made |  /connect/admin |
