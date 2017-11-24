@@ -4,10 +4,10 @@ namespace ObjectivePHP\Package\Connect;
 
 use Fei\Service\Connect\Client\Config\Config;
 use Fei\Service\Connect\Client\Connect;
-use Fei\Service\Connect\Common\Entity\User;
 use ObjectivePHP\Application\ApplicationInterface;
-use ObjectivePHP\Application\Session\Session;
+use ObjectivePHP\Application\Workflow\Filter\FiltersHandler;
 use ObjectivePHP\Application\Workflow\Step;
+use ObjectivePHP\Invokable\InvokableInterface;
 use ObjectivePHP\Package\Connect\Config\ConnectConfig;
 use ObjectivePHP\ServicesFactory\ServiceReference;
 
@@ -18,38 +18,49 @@ use ObjectivePHP\ServicesFactory\ServiceReference;
  */
 class ConnectPackage
 {
+    use FiltersHandler;
+
     /** @var string */
     protected $authStepName;
 
     /**
      * ConnectPackage constructor.
      *
-     * @param string $authStepName
+     * @param string               $authStepName
+     * @param InvokableInterface[] $filters
      */
-    public function __construct(string $authStepName = 'auth')
+    public function __construct(string $authStepName = 'auth', InvokableInterface ...$filters)
     {
         $this->setAuthStepName($authStepName);
+        $this->setFilters($filters);
     }
 
     /**
      * Invoke magic method
      *
      * @param ApplicationInterface $app
-     * @return \Psr\Http\Message\ResponseInterface
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
      */
     public function __invoke(ApplicationInterface $app)
     {
         $app->getServicesFactory()->registerService(...$this->getServicesSpecs($app));
 
         if ($app->getSteps()->has($this->getAuthStepName())) {
+            $filters = $this->getFilters() ?? [];
+
             /** @var Step $step */
             $step = $app->getSteps()->get($this->getAuthStepName());
             $step->plug(function (ApplicationInterface $app) {
                 return $this->getConnectResponse($app);
-            });
-        } else {
+            }, ...$filters);
+        }
+
+        if ($this->runFilters($app)) {
             return $this->getConnectResponse($app);
         }
+
+        return null;
     }
 
     /**
@@ -64,10 +75,7 @@ class ConnectPackage
         /** @var Connect $connect */
         $connect = $app->getServicesFactory()->get('connect.client');
 
-        if ($connect->getUser() instanceof User) {
-            (new Session())->set('connect_user', $connect->getUser());
-        }
-        $connect->handleRequest($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
+        $connect->handleRequest($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD'])->emit();
 
         return $connect->getResponse();
     }
@@ -101,7 +109,7 @@ class ConnectPackage
                 'setPrivateKeyFilePath' => [$directive['privateKeyFilePath']],
                 'setAdminPathInfo' => [$directive['adminPathInfo']],
             ];
-            
+
             $callback = $directive['profileAssociationCallback'];
             if ($callback) {
                 $setters['registerProfileAssociation'] = [$callback, $directive['profileAssociationPath']];
@@ -114,7 +122,7 @@ class ConnectPackage
             ];
         } else {
             throw new \Exception(sprintf(
-                'Configuration `%s` not found',
+                'Connect Client configuration `%s` not found',
                 ConnectConfig::class
             ));
         }

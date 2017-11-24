@@ -43,7 +43,7 @@ class ConnectConfig extends SingleValueDirective
             'spMetadataFile' => 'sp.xml',
             'idpMetadataFile' => 'idp.xml',
             'idpMetadataFileTarget' => 'idp.xml',
-            'privateKeyFilePath' => 'app/key',
+            'privateKeyFilePath' => 'app/key/sp.pem',
             'adminPathInfo' => '/connect/admin',
         ];
     }
