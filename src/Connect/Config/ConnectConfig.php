@@ -39,12 +39,12 @@ class ConnectConfig extends SingleValueDirective
             'entityId' => null,
             'idpEntityID' => null,
             'name' => null,
-            'samlMetadataBaseDir' => 'app/metadata',
+            'samlMetadataBaseDir' => 'app/config/Saml/metadata',
             'spMetadataFile' => 'sp.xml',
             'idpMetadataFile' => 'idp.xml',
-            'idpMetadataFileTarget' => 'idp.xml',
-            'privateKeyFilePath' => 'app/key/sp.pem',
-            'adminPathInfo' => '/connect/admin',
+            'idpMetadataFileTarget' => '/idp.xml',
+            'privateKeyFilePath' => 'app/config/key/sp.pem',
+            'adminPathInfo' => '/connect/admin'
         ];
     }
 
