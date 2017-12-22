@@ -22,6 +22,6 @@
     ],
     "require": {
         "objective-php/application": "^1.0",
-        "fei/connect-client": "2.1.0"
+        "fei/connect-client": "~2.1.0"
     }
 }
