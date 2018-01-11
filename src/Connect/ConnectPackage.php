@@ -54,9 +54,7 @@ class ConnectPackage
             $step->plug(function (ApplicationInterface $app) {
                 return $this->getConnectResponse($app);
             }, ...$filters);
-        }
-
-        if ($this->runFilters($app)) {
+        } elseif ($this->runFilters($app)) {
             return $this->getConnectResponse($app);
         }
 
