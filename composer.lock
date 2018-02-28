@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "40273b7d6ef2aba0c5e4548f699ab23f",
+    "content-hash": "ca7080ec4e9ea521b6db8fd8a02ca958",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -415,17 +415,17 @@
         },
         {
             "name": "fei/connect-client",
-            "version": "v2.1.2",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:flash-global/connect-client.git",
-                "reference": "2de875f215757c8060b9cc87d81fb68b23eeac66"
+                "reference": "9ebe03adb0788b464b5efb7f90cb2015826b6e2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-connect-client-2de875f215757c8060b9cc87d81fb68b23eeac66-zip-cc0929.zip",
-                "reference": "2de875f215757c8060b9cc87d81fb68b23eeac66",
-                "shasum": "8f6054205e85eacda9b2a48d86beacf629c8d5d0"
+                "url": "https://composer.flash-global.net/dist/fei-connect-client-9ebe03adb0788b464b5efb7f90cb2015826b6e2e-zip-6ac2b6.zip",
+                "reference": "9ebe03adb0788b464b5efb7f90cb2015826b6e2e",
+                "shasum": "ba703ffcbe54b9c54d83096139e795c7a3cbcdd1"
             },
             "require": {
                 "fei/api-client": "~1.2.0",
@@ -456,10 +456,10 @@
             ],
             "description": "Flash Connect Client - Service Provider",
             "support": {
-                "source": "https://github.com/flash-global/connect-client/tree/v2.1.2",
+                "source": "https://github.com/flash-global/connect-client/tree/v2.2.0",
                 "issues": "https://github.com/flash-global/connect-client/issues"
             },
-            "time": "2017-12-22T15:15:43+00:00"
+            "time": "2018-02-28T15:20:38+00:00"
         },
         {
             "name": "fei/connect-common",
