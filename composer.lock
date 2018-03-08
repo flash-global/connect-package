@@ -415,17 +415,17 @@
         },
         {
             "name": "fei/connect-client",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:flash-global/connect-client.git",
-                "reference": "9ebe03adb0788b464b5efb7f90cb2015826b6e2e"
+                "reference": "920b951e1370493eb52f39f8348b1627ec6a4420"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-connect-client-9ebe03adb0788b464b5efb7f90cb2015826b6e2e-zip-6ac2b6.zip",
-                "reference": "9ebe03adb0788b464b5efb7f90cb2015826b6e2e",
-                "shasum": "ba703ffcbe54b9c54d83096139e795c7a3cbcdd1"
+                "url": "https://composer.flash-global.net/dist/fei-connect-client-920b951e1370493eb52f39f8348b1627ec6a4420-zip-8663bd.zip",
+                "reference": "920b951e1370493eb52f39f8348b1627ec6a4420",
+                "shasum": "02392425563d1c68fbd4f1922e0b4b354f38535e"
             },
             "require": {
                 "fei/api-client": "~1.2.0",
@@ -456,10 +456,10 @@
             ],
             "description": "Flash Connect Client - Service Provider",
             "support": {
-                "source": "https://github.com/flash-global/connect-client/tree/v2.2.0",
+                "source": "https://github.com/flash-global/connect-client/tree/master",
                 "issues": "https://github.com/flash-global/connect-client/issues"
             },
-            "time": "2018-02-28T15:20:38+00:00"
+            "time": "2018-03-08T13:52:28+00:00"
         },
         {
             "name": "fei/connect-common",
