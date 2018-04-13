@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca7080ec4e9ea521b6db8fd8a02ca958",
+    "content-hash": "1b98c42bc7c2ee3c4f43590c88387f0b",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -376,12 +376,12 @@
             "version": "v1.2.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/api-client.git",
+                "url": "https://github.com/flash-global/api-client.git",
                 "reference": "427236a046c9f7e08e5d110d39eecbe260338629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-api-client-427236a046c9f7e08e5d110d39eecbe260338629-zip-729128.zip",
+                "url": "https://api.github.com/repos/flash-global/api-client/zipball/427236a046c9f7e08e5d110d39eecbe260338629",
                 "reference": "427236a046c9f7e08e5d110d39eecbe260338629",
                 "shasum": "46ec08bd8449e2010bae07934a125337f5819245"
             },
@@ -415,29 +415,32 @@
         },
         {
             "name": "fei/connect-client",
-            "version": "v2.2.1",
+            "version": "v2.2.3",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/connect-client.git",
-                "reference": "920b951e1370493eb52f39f8348b1627ec6a4420"
+                "url": "https://github.com/flash-global/connect-client.git",
+                "reference": "c217cdded29564d0bf7c520026eb15db46adfdc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-connect-client-920b951e1370493eb52f39f8348b1627ec6a4420-zip-8663bd.zip",
-                "reference": "920b951e1370493eb52f39f8348b1627ec6a4420",
-                "shasum": "02392425563d1c68fbd4f1922e0b4b354f38535e"
+                "url": "https://api.github.com/repos/flash-global/connect-client/zipball/c217cdded29564d0bf7c520026eb15db46adfdc7",
+                "reference": "c217cdded29564d0bf7c520026eb15db46adfdc7",
+                "shasum": ""
             },
             "require": {
                 "fei/api-client": "~1.2.0",
-                "fei/connect-common": "~2.1.0",
+                "fei/connect-common": "~2.2.0",
                 "lightsaml/lightsaml": "^1.2",
                 "nikic/fast-route": "^1.0",
+                "php": ">=5.5",
                 "psr/simple-cache": "^1.0",
                 "zendframework/zend-cache": "^2.7",
                 "zendframework/zend-diactoros": "^1.3"
             },
             "require-dev": {
-                "codeception/codeception": "^2.3"
+                "codeception/codeception": "^2.3",
+                "phpunit/phpunit": "~4.8",
+                "squizlabs/php_codesniffer": "^3.2"
             },
             "type": "project",
             "autoload": {
@@ -445,47 +448,49 @@
                     "Fei\\Service\\Connect\\Client\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0"
             ],
             "authors": [
                 {
-                    "name": "Vincent Simonin",
-                    "email": "vsi@opcoding.eu"
+                    "name": "Yoctu",
+                    "email": "contact@yoctu.com",
+                    "homepage": "http://yoctu.com/"
                 }
             ],
-            "description": "Flash Connect Client - Service Provider",
-            "support": {
-                "source": "https://github.com/flash-global/connect-client/tree/master",
-                "issues": "https://github.com/flash-global/connect-client/issues"
-            },
-            "time": "2018-03-08T13:52:28+00:00"
+            "description": "Yoctu Connect Client - Service Provider",
+            "time": "2018-04-13T13:11:18+00:00"
         },
         {
             "name": "fei/connect-common",
-            "version": "v2.1.1",
+            "version": "v2.2.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/connect-common.git",
-                "reference": "8cead76bc058f58ba9c306d7adbc2736c5806c86"
+                "url": "https://github.com/flash-global/connect-common.git",
+                "reference": "f17c15acb2476286478ceb44cf6b9c186463461b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-connect-common-8cead76bc058f58ba9c306d7adbc2736c5806c86-zip-a9154a.zip",
-                "reference": "8cead76bc058f58ba9c306d7adbc2736c5806c86",
-                "shasum": "594a2892ecc77dd7d09373e068fbee10550f5858"
+                "url": "https://api.github.com/repos/flash-global/connect-common/zipball/f17c15acb2476286478ceb44cf6b9c186463461b",
+                "reference": "f17c15acb2476286478ceb44cf6b9c186463461b",
+                "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "~1.2.0",
                 "doctrine/collections": "~1.3.0",
                 "egulias/email-validator": "~2.1",
                 "fei/entities": "^1.0",
+                "league/fractal": "^0.14.0",
+                "php": ">=5.5",
                 "phpseclib/phpseclib": "^2.0",
                 "zendframework/zend-diactoros": "^1.4",
                 "zendframework/zend-permissions-acl": "^2.6"
             },
             "require-dev": {
-                "codeception/codeception": "^2.3"
+                "codeception/codeception": "~2.4",
+                "phpunit/phpunit": "~4.8",
+                "squizlabs/php_codesniffer": "^3.2"
             },
             "type": "library",
             "autoload": {
@@ -493,33 +498,31 @@
                     "Fei\\Service\\Connect\\Common\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0"
             ],
             "authors": [
                 {
-                    "name": "Vincent Simonin",
-                    "email": "vsi@opcoding.eu"
+                    "name": "Yoctu",
+                    "email": "contact@yoctu.com",
+                    "homepage": "http://yoctu.com/"
                 }
             ],
             "description": "Flash Connect common components",
-            "support": {
-                "source": "https://github.com/flash-global/connect-common/tree/v2.1.1",
-                "issues": "https://github.com/flash-global/connect-common/issues"
-            },
-            "time": "2017-12-22T14:40:45+00:00"
+            "time": "2018-04-13T12:00:36+00:00"
         },
         {
             "name": "fei/entities",
             "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/entities.git",
+                "url": "https://github.com/flash-global/entities.git",
                 "reference": "21eeb9dee1c43dc1520228d41aea8d5bc2b305ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.flash-global.net/dist/fei-entities-21eeb9dee1c43dc1520228d41aea8d5bc2b305ef-zip-0ace6b.zip",
+                "url": "https://api.github.com/repos/flash-global/entities/zipball/21eeb9dee1c43dc1520228d41aea8d5bc2b305ef",
                 "reference": "21eeb9dee1c43dc1520228d41aea8d5bc2b305ef",
                 "shasum": "ca5a9abf9b0bcd3d95452ac52071e2b5a6bb8c7a"
             },
@@ -723,6 +726,69 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "league/fractal",
+            "version": "0.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/fractal.git",
+                "reference": "56ad8933fbb40328ca3321c84143b2c16186eebf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/56ad8933fbb40328ca3321c84143b2c16186eebf",
+                "reference": "56ad8933fbb40328ca3321c84143b2c16186eebf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "illuminate/contracts": "~5.0",
+                "mockery/mockery": "~0.9",
+                "pagerfanta/pagerfanta": "~1.0.0",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5",
+                "zendframework/zend-paginator": "~2.3"
+            },
+            "suggest": {
+                "illuminate/pagination": "The Illuminate Pagination component.",
+                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
+                "zendframework/zend-paginator": "Zend Framework Paginator"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Fractal\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Sturgeon",
+                    "email": "me@philsturgeon.uk",
+                    "homepage": "http://philsturgeon.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handle the output of complex data structures ready for API output.",
+            "homepage": "http://fractal.thephpleague.com/",
+            "keywords": [
+                "api",
+                "json",
+                "league",
+                "rest"
+            ],
+            "time": "2016-07-21T09:56:14+00:00"
         },
         {
             "name": "lightsaml/lightsaml",
