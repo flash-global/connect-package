@@ -14,14 +14,8 @@
             "ObjectivePHP\\Package\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.flash-global.net"
-        }
-    ],
     "require": {
         "objective-php/application": "^1.0",
-        "fei/connect-client": "~2.1.0"
+        "fei/connect-client": "~2.2.0"
     }
 }
