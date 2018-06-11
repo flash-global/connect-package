@@ -11,11 +11,16 @@
     ],
     "autoload": {
         "psr-4": {
-            "ObjectivePHP\\Package\\": "src/"
+            "Fei\\Service\\Connect\\Package\\": "src/"
         }
     },
     "require": {
-        "objective-php/application": "^1.0",
-        "fei/connect-client": "~2.2.0"
+        "php": ">=7.0",
+        "ext-mcrypt": "*",
+        "objective-php/application": "^2.0",
+        "fei/connect-client": "~3.0.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.4"
     }
 }
