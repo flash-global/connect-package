@@ -41,7 +41,7 @@ class Application extends AbstractHttpApplication
 
 By registering Connect-Package, your application will gain:
 
-* Connect-Client, Connect-Config and Connect-User services with theirs associated injector
+* Connect-Client, Connect-Config and Connect-User services with their associated injectors
 * If your application is a HTTP Application (extending `ObjectivePHP\Application\AbstractHttpApplication`), Connect-Package middlewares
 
 ### Connect Services
@@ -54,7 +54,7 @@ Connect-Package exposes 3 services (see configuration section for service name p
 
 ### Injectors
 
-Injectors is an great feature of Objective-PHP services factory. With injectors, your services will be injected the
+Injectors is an great feature of Objective-PHP services factory. With injectors, your services will be injected in the
 right dependency by the services factory. Here below an example:
 
 ```php
@@ -85,8 +85,8 @@ class MyService implements UserAwareInterface
 }
 ```
 
-Thanks injectors, by implementing `Fei\Service\Connect\Package\UserAwareInterface`, services factory will inject into
-your service the current instance of Connect-User service.
+By implementing Fei\Service\Connect\Package\UserAwareInterface, services factory will inject into your service the
+current instance of Connect-User service thanks to injectors.
 
 Connect-Package register 2 injectors:
 
