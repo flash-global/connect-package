@@ -86,7 +86,7 @@ class ConnectPackage
      * @return array
      * @throws \Exception
      */
-    protected function getServicesSpecs(ApplicationInterface $app)
+    public function getServicesSpecs(ApplicationInterface $app)
     {
         $config = $app->getConfig();
         $specs = [];

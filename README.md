@@ -78,11 +78,43 @@ You can configure multiple things with the `ConnectConfig` class and its setters
 | `setDefaultTargetPath`          | Target path where the user is redirected | / |
 | `setLogoutTargetPath`           | Target path where the user is redirected after logging out |     /      |
 | `setEntityID`                   | Identifier (url) of the project that use this package| none|
-| `setName`                       |Name (label) of the application| url of the application |
-| `setIdpEntityID`                |Identifier (url) of the IDP | none |
-| `setSamlMetadataBaseDir`        |Directory where the Saml metadata are stored| app/metadata|
-| `setSpMetadataFile`             |Metadata file of the service provider| sp.xml |
-| `setIdpMetadataFile`            |Metadata file of the identity provider| idp.xml |
-| `setIdpMetadataFileTarget`      |Metadata file target of the identity provider|idp.xml|
-| `setPrivateKeyFilePath`         |Path where the private key file is stored| app/key|
+| `setName`                       | Name (label) of the application| url of the application |
+| `setIdpEntityID`                | Identifier (url) of the IDP | none |
+| `setSamlMetadataBaseDir`        | Directory where the Saml metadata are stored| app/metadata|
+| `setSpMetadataFile`             | Metadata file of the service provider| sp.xml |
+| `setIdpMetadataFile`            | Metadata file of the identity provider| idp.xml |
+| `setIdpMetadataFileTarget`      | Metadata file target of the identity provider|idp.xml|
+| `setPrivateKeyFilePath`         | Path where the private key file is stored| app/key|
 | `setAdminPathInfo`              | Endpoint where the administration of the client is made |  /connect/admin |
+
+## Installation Command
+
+For convenience, we provide a installation command. This command register the current application into your instance of
+Connect-IDP, create the Service Provider metadata file (the famous sp.xml file) and the private key if its not exists.
+
+Installation :
+
+Put this directive into your config file :
+
+```php
+<?php
+
+use ObjectivePHP\Cli\Config\CliCommand;
+use ObjectivePHP\Package\Connect\Command\InstallCommand;
+
+return [
+    // ...
+    new CliCommand(new InstallCommand())
+];
+```
+
+Usage :
+
+`vendor/bin/op usage connect:install`
+
+Optional options :
+
+* `--logout`: Logout url for the application (http://your.entityID/logout by default)
+* `--acs`: Acs url for the application (http://your.entityID/acs by default)
+
+The output of the install comment will print the sp.xml file content. This is useful for finishing the installation. 
