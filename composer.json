@@ -1,26 +1,32 @@
 {
-    "name": "fei/connect-package",
-    "description": "Connect client package integration for Objective PHP applications",
-    "type": "library",
-    "license": "proprietary",
-    "authors": [
-        {
-            "name": "Vincent Simonin",
-            "email": "vsi@opcoding.eu"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Fei\\Service\\Connect\\Package\\": "src/"
-        }
-    },
-    "require": {
-        "php": ">=7.0",
-        "ext-mcrypt": "*",
-        "objective-php/application": "^2.0",
-        "fei/connect-client": "~3.0.0"
-    },
-    "require-dev": {
-        "codeception/codeception": "^2.4"
+  "name": "fei/connect-package",
+  "description": "Connect client package integration for Objective PHP applications",
+  "type": "library",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Yoctu",
+      "email": "contact@yoctu.com",
+      "homepage": "http://yoctu.com/"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Fei\\Service\\Connect\\Package\\": "src/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.0.27"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "ext-mcrypt": "*",
+    "objective-php/application": "^2.0",
+    "fei/connect-client": "~3.0.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.4"
+  }
 }

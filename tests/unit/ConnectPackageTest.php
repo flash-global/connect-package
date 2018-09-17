@@ -203,7 +203,7 @@ class ConnectPackageTest extends TestCase
         $this->assertEquals(new MiddlewareRegistry(), $application->getMiddlewares());
 
         $this->assertEquals(
-            (new User())->setUserName('test'),
+            (new User())->setUserName('test')->setCreatedAt(new \DateTime('1984/10/11 10:00:00')),
             $servicesFactory->get($connectConfig->getUserServiceId())
         );
     }
@@ -212,6 +212,8 @@ class ConnectPackageTest extends TestCase
     {
         $config = new Config();
         $config->registerDirective(new ConnectDirective());
+
+
 
         $config->hydrate([
             'connect' => [
