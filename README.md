@@ -7,7 +7,7 @@ Service Provider.
 
 ## Installation
 
-Connect Package needs **PHP 7.0** or up, with the extension `mcrypt` plugged to run correctly.
+Connect Package needs **PHP 7.0** or up, with the extension `openssl` plugged to run correctly.
 
 You will have to integrate it to your Objective PHP project with `composer require fei/connect-package`
 
