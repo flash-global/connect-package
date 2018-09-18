@@ -2,16 +2,22 @@
     "name": "fei/connect-package",
     "description": "Connect client package integration for Objective PHP applications",
     "type": "library",
-    "license": "proprietary",
+    "license": "GPL-3.0",
     "authors": [
         {
-            "name": "Vincent Simonin",
-            "email": "vsi@opcoding.eu"
+            "name": "Yoctu",
+            "email": "contact@yoctu.com",
+            "homepage": "http://yoctu.com/"
         }
     ],
     "autoload": {
         "psr-4": {
             "Fei\\Service\\Connect\\Package\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.27"
         }
     },
     "require": {
@@ -21,6 +27,7 @@
         "fei/connect-client": "~3.0.0"
     },
     "require-dev": {
-        "codeception/codeception": "^2.4"
+        "codeception/codeception": "^2.4",
+        "squizlabs/php_codesniffer": "^3"
     }
 }
