@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26ddf3d359b803a921d3306467d7abef",
+    "content-hash": "a508a87597a64c9d1794fb55378150e8",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -337,7 +337,7 @@
             "version": "v3.1.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:flash-global/connect-client.git",
+                "url": "https://github.com/flash-global/connect-client.git",
                 "reference": "593d2db0a55c271ec4827e001cdb0e24d1269751"
             },
             "require": {

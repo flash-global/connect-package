@@ -18,7 +18,7 @@
     "repositories" : [
         {
             "type" : "git",
-            "url": "git@github.com:flash-global/connect-client.git"
+            "url": "https://github.com/flash-global/connect-client.git"
         }
     ],
     "config": {
