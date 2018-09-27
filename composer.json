@@ -30,7 +30,7 @@
         "php": ">=7.0",
         "ext-openssl": "*",
         "objective-php/application": "^2.0",
-        "fei/connect-client": "~3.0.0"
+        "fei/connect-client": "~3.1.0"
     },
     "require-dev": {
         "codeception/codeception": "^2.4",
