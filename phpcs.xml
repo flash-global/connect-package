@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="PHP_CodeSniffer">
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+
+    <arg value="n"/>
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <rule ref="PEAR.Functions.FunctionCallSignature">
+        <properties>
+            <property name="allowMultipleArguments" value="true" />
+            <property name="requiredSpacesAfterOpen" value="0" />
+            <property name="requiredSpacesBeforeClose" value="0" />
+        </properties>
+    </rule>
+    <rule ref="PSR2"/>
+</ruleset>

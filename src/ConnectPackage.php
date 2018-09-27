@@ -40,7 +40,9 @@ class ConnectPackage implements ConfigProviderInterface, PackageInterface, Packa
 
     public function onPackagesReady(WorkflowEventInterface $event)
     {
-        /** @var ConnectDirective $config */
+        /**
+         * @var ConnectDirective $config
+         */
         $config = $event->getApplication()->getConfig()->get(ConnectDirective::KEY);
 
         $event->getApplication()->getServicesFactory()->registerInjector(
@@ -71,27 +73,33 @@ class ConnectPackage implements ConfigProviderInterface, PackageInterface, Packa
             ];
         }
 
-        $event->getApplication()->getServicesFactory()->registerService([
-            'id' => $config->getConfigServiceId(),
-            'class' => ConnectConfig::class,
-            'setters' => $setters
-        ]);
+        $event->getApplication()->getServicesFactory()->registerService(
+            [
+                'id' => $config->getConfigServiceId(),
+                'class' => ConnectConfig::class,
+                'setters' => $setters
+            ]
+        );
 
-        $event->getApplication()->getServicesFactory()->registerService([
-            'id' => $config->getClientServiceId(),
-            'class' => Connect::class,
-            'params' => [sprintf('service(%s)', $config->getConfigServiceId())],
-            'setters' => $config->enable() ? [] : ['setUser' => $config->getMockUser()]
-        ]);
+        $event->getApplication()->getServicesFactory()->registerService(
+            [
+                'id' => $config->getClientServiceId(),
+                'class' => Connect::class,
+                'params' => [sprintf('service(%s)', $config->getConfigServiceId())],
+                'setters' => $config->enable() ? [] : ['setUser' => $config->getMockUser()]
+            ]
+        );
 
-        $event->getApplication()->getServicesFactory()->registerService([
-            'id' => $config->getUserServiceId(),
-            'factory' => function ($id, ServicesFactory $servicesFactory) use ($config) {
-                return $config->enable()
-                    ? $servicesFactory->get($config->getClientServiceId())->getUser()
-                    : $config->getMockUser();
-            }
-        ]);
+        $event->getApplication()->getServicesFactory()->registerService(
+            [
+                'id' => $config->getUserServiceId(),
+                'factory' => function ($id, ServicesFactory $servicesFactory) use ($config) {
+                    return $config->enable()
+                        ? $servicesFactory->get($config->getClientServiceId())->getUser()
+                        : $config->getMockUser();
+                }
+            ]
+        );
 
         $application = $event->getApplication();
 

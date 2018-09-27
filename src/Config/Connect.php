@@ -288,6 +288,7 @@ class Connect extends AbstractComplexDirective
      */
     public function setMockUser(array $mockUser)
     {
+        $mockUser['createdAt'] = $mockUser['createdAt'] ?? new \DateTime('1984/10/11 10:00:00');
         $this->mockUser = new User($mockUser);
 
         return $this;
