@@ -19,12 +19,18 @@
         "php": ">= 7.0",
         "ext-openssl": "*",
         "objective-php/application": "^1.0",
-        "fei/connect-client": "~3.0.0",
+        "fei/connect-client": "~3.1.0",
         "objective-php/cli": "^1.2"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3"
     },
+    "repositories" : [
+        {
+            "type" : "git",
+            "url": "https://github.com/flash-global/connect-client.git"
+        }
+    ],
     "config": {
         "platform": {
             "php": "7.0.32"
