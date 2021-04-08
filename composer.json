@@ -24,7 +24,8 @@
         "php": ">=7.0",
         "ext-openssl": "*",
         "objective-php/application": "^2.0",
-        "fei/connect-client": "^3.1.1"
+        "objective-php/config": ">= 2.0 < 2.0.2",
+        "fei/connect-client": "^4.3.2"
     },
     "require-dev": {
         "codeception/codeception": "^2.4",
